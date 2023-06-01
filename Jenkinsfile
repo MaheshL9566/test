@@ -8,10 +8,7 @@ pipeline {
   agent any
 
   stages {
-      stage('Initialize')  {
-        def dockerHome = tool 'MyDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
+           
     stage('Checkout Source') {
       steps {
         git 'https://github.com/MaheshL9566/test.git'
