@@ -1,5 +1,10 @@
 pipeline {
 
+         stage('Initialize')
+    {
+        def dockerHome = tool 'MyDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
   environment {
     dockerimagename = "maheshl9566/nodeapp"
     dockerImage = ""
